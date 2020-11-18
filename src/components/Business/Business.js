@@ -1,6 +1,7 @@
 import React from 'react';
-// Hard coding a business object for the time being.  Will use an API request in the future to update.
+import './Business.css';
 
+// Hard coding a business object for the time being.  Will use an API request in the future to update.
 const business = {
   imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
   name: 'MarginOtto Pizzeria',
