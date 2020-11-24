@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import '../BusinessList/BusinessList';
-import '../SearchBar/SearchBar';
 
+import BusinessList from '../BusinessList/BusinessList';
+import SearchBar from '../SearchBar/SearchBar';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>ravenous</h1>
-        <SeachBar />
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>ravenous</h1>
+        <SearchBar />
         <BusinessList />
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
