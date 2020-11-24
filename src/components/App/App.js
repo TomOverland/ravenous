@@ -23,7 +23,7 @@ const businesses = [
   business,
   business,
   business
-]
+];
 
 class App extends React.Component {
   render() {
