@@ -18,6 +18,10 @@ class SearchBar extends React.Component {
       'Highest Rated': 'rating',
       'Most Reviewed': 'review_count'
     };
+
+    // Binding methods which use "this" in the constructor
+    this.handleTermChange = this.handleTermChange.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
   }
 
   // returns the current CSS class for a sorting option
@@ -36,10 +40,32 @@ class SearchBar extends React.Component {
     })
   }
 
+  // Handling changes in the input element "Terms" which is the input for businesses
+  handleTermChange(event) {
+    this.setState({
+      term: event.target.value
+    })
+  }
+
+  // Handling changes in the input element "location" which is the location to search in
+  handleLocationChange(event) {
+    this.setState({
+      location: event.target.value
+    })
+  }
+
   renderSortByOptions() {
     return Object.keys(this.sortByOptions).map(sortByOption => {
       let sortByOptionValue = this.sortByOptions[sortByOption];
-      return <li key={sortByOptionValue} className={this.getSortByClass(sortByOptionValue)}>{sortByOption}</li>;
+      // the className in this <li> will conditionally style each sort by option, 
+      // displaying to the user which sorting option is currently selected.
+      // I'm also binding this and sortByOptionValue on click, ensuring the method
+      // is called with the appropriate value when clicked.
+      return <li 
+              key={sortByOptionValue} 
+              className={this.getSortByClass(sortByOptionValue)}
+              onClick={this.handleSortByChange.bind(this, sortByOptionValue)}
+              >{sortByOption}</li>;
     });
   }
 
@@ -52,8 +78,8 @@ class SearchBar extends React.Component {
           </ul>
         </div>
         <div className="SearchBar-fields">
-          <input placeholder="Search Businesses" />
-          <input placeholder="Where?" />
+          <input placeholder="Search Businesses" onChange={this.handleTermChange} />
+          <input placeholder="Where?" onChange={this.handleLocationChange} />
         </div>
         <div className="SearchBar-submit">
           <a>Let's Go</a>
