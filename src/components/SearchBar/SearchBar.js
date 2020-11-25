@@ -22,11 +22,12 @@ class SearchBar extends React.Component {
     // Binding methods which use "this" in the constructor
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   // returns the current CSS class for a sorting option
   getSortByClass(sortByOption) {
-    if (this.sortBy == sortByOption) {
+    if (this.sortBy === sortByOption) {
       return 'active';
     } else {
       return '';
@@ -53,6 +54,11 @@ class SearchBar extends React.Component {
       location: event.target.value
     })
   }
+  
+  handleSearch(event) {
+    this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+    event.preventDefault()
+  }
 
   renderSortByOptions() {
     return Object.keys(this.sortByOptions).map(sortByOption => {
@@ -69,6 +75,8 @@ class SearchBar extends React.Component {
     });
   }
 
+  
+
   render() {
     return (
       <div className="SearchBar">
@@ -82,7 +90,7 @@ class SearchBar extends React.Component {
           <input placeholder="Where?" onChange={this.handleLocationChange} />
         </div>
         <div className="SearchBar-submit">
-          <a>Let's Go</a>
+          <a onClick={this.handleSearch}>Let's Go</a>
         </div>
       </div>
     );
