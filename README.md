@@ -1,6 +1,6 @@
 ## ravenous
 
-A client-side React application, utilizing the Yelp API to search for local businesses. I deployed this site to Github Pages. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A client-side React application, utilizing the Yelp API to search for local businesses. I deployed this site to Github Pages. This site uses CORS Anywhere API to enables cross-origin requests to Yelp, which may cause a slight delay in your first search due to the API being hosted through Heroku.
 
 [Live Website](https://tomoverland.github.io/ravenous/).
 
