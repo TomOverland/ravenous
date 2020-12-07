@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ravenous/static/css/main.ecfbe5b8.chunk.css",
+    "main.js": "/ravenous/static/js/main.08c39fc5.chunk.js",
+    "main.js.map": "/ravenous/static/js/main.08c39fc5.chunk.js.map",
+    "runtime~main.js": "/ravenous/static/js/runtime~main.f8ce170b.js",
+    "runtime~main.js.map": "/ravenous/static/js/runtime~main.f8ce170b.js.map",
+    "static/js/2.3053200f.chunk.js": "/ravenous/static/js/2.3053200f.chunk.js",
+    "static/js/2.3053200f.chunk.js.map": "/ravenous/static/js/2.3053200f.chunk.js.map",
+    "index.html": "/ravenous/index.html",
+    "precache-manifest.ae0da7bb1c0e07d238569b77c4870ed3.js": "/ravenous/precache-manifest.ae0da7bb1c0e07d238569b77c4870ed3.js",
+    "service-worker.js": "/ravenous/service-worker.js",
+    "static/css/main.ecfbe5b8.chunk.css.map": "/ravenous/static/css/main.ecfbe5b8.chunk.css.map",
+    "static/media/SearchBar.css": "/ravenous/static/media/background_search_mobile.5d0905e6.jpg"
+  }
+}
